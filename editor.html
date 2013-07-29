@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+		
+	</head>
+	<body>
+		<form action="makeNews.php" method="post">
+			Titulo: <input type= "text" name="titulo">
+			Categoria: <select name="categoria">
+			<option value='Estudiantes'> Estudiantes </option>
+			<option value='Materias'> Materias </option>
+			<option value='Eventos'> Eventos </option>
+			<option value='Anuncio'> Anuncio </option>
+			<option value='Popurri'> Popurri </option>
+			</select>
+			Autor: <input type= "text" name="author" value= "UBA">
+			Bajada:<textarea name="bajada" maxlength='140' rows='2' cols='80'></textarea>
+			<textarea name="text" class="ckeditor" rows="10000" cols="80"></textarea>
+			<input type="submit">
+		</form>
+
+	
+	</body>	
+</html>
