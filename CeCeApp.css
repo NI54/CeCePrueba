@@ -943,48 +943,57 @@ img{
 
 img.academicas
 {
-min-width: 100%;
+width: 50px;
 background:url(academicas.png) 0 0;
 }
 img.facebook
 {
-min-width: 100%;
-background:url(images/facebook.png) 0 0;
+width:50px;
+height:50px;
+background:url(Plancha_Iconografica.png) -50px 0;
 }
 img.garraham
 {
-min-width: 100%;
-background:url(images/garraham.png) 0 0;
+width:50px;
+height:50px;
+background:url(Plancha_Iconografica.png) -100px 0;
 }
 img.mail
 {
-min-width: 100%;
-background:url(images/correo.png) 0 0;
+width:50px;
+height:50px;
+background:url(Plancha_Iconografica.png) -150px 0;
 }
 img.oferta
 {
-min-width: 100%;
-background:url(images/oferta.png) 0 0;
+width:50px;
+height:50px;
+background:url(Plancha_Iconografica.png) -200px 0;
 }
 img.preguntas
 {
-min-width: 100%;
-background:url(images/preguntas.png) 0 0;
+width:50px;
+height:50px;
+background:url(Plancha_Iconografica.png) 0.5px -50px;
 }
 img.tramo
 {
-min-width: 100%;
-background:url(images/tramo.png) 0 0;
+width:50px;
+height:50px;
+height: 20%;
+background:url(Plancha_Iconografica.png) -50px -50px;
 }
 img.profesional
 {
-min-width: 100%;
-background:url(images/profesional.png) 0 0;
+width:50px;
+height:50px;
+background:url(Plancha_Iconografica.png) -100px -50px;
 }
 img.recreativas
 {
-min-width: 100%;
-background:url(images/recreativas.png) 0 0;
+width:50px;
+height:50px;
+background:url(Plancha_Iconografica.png) -150px -50px;
 }
 img.twitter
 {	
