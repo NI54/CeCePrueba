@@ -3380,3 +3380,14 @@ div.ui-slider-switch.ui-mini {
 	width: 3em;
 	height: auto;
 }
+.ui-btn3{
+	width: 1em;
+	margin: 0;
+	padding: 0;
+	height: auto;
+}
+.ui-controlgroup{
+	padding: 0;
+	margin: 0;
+}
+
