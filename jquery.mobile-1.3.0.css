@@ -3389,5 +3389,6 @@ div.ui-slider-switch.ui-mini {
 .ui-controlgroup{
 	padding: 0;
 	margin: 0;
+	height: auto;
 }
 
