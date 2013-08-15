@@ -3372,21 +3372,28 @@ div.ui-slider-switch.ui-mini {
 	}	
 }
 
-.ui-btn{
-	width: 9em;
+
+
+.ui-btn4{
+	padding: 1em;
+	padding-bottom: 0em;
+	width: 7em;
 	height: auto;
 }
 .ui-btn2{
+	
 	width: 3em;
 	height: auto;
 }
 .ui-btn3{
+	
 	width: 2em;
 	margin: 0;
 	padding: 0;
 	height: auto;
 }
 .ui-controlgroup{
+	
 	padding: 0;
 	margin: 0;
 	height: auto;
@@ -3401,4 +3408,12 @@ body {
 }
 .landscape, .landscape .ui-page, .portrait, .portrait .ui-page {
 	min-height: 100%;
+}
+
+.padeo{
+	padding: 1em;
+}
+
+.scalado{
+	font-size: 10em;
 }

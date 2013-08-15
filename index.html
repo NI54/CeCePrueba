@@ -39,7 +39,7 @@
 	
 	<div data-role='header' id="hdrMain" data-theme='a' name="hdrMain" data-nobackbtn="false" >
 		
-		<h1>CECE App</h1>
+		<h1 class="scalado">CECE App</h1>
 		
 		
 	</div>
@@ -48,33 +48,44 @@
 	<div data-role='content' id='mainContent5' data-theme='a'>
 		
 		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
-			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('all')" >
+			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('all')" class= "ui-btn4" >
 				<img src="images/novedades.png" >
+				<p>Novedades</p>
 			</a>			
-			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Oferta')">
+			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Oferta')" class= "ui-btn4">
 			<img src="images/oferta.png">
+			<p>Oferta</p>
 			</a>
 			</div>
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
-			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Tramo')">
+		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center" >
+			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Tramo')" class= "ui-btn4">
 			<img src="images/tramo.png" >
+			<p>Primer Tramo</p>
 			</a>
-			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Academicas')">
+			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Academicas')" class= "ui-btn4">
 			<img src="images/academicas.png">
+			<p>Academicas</p>
 			</a>
 		</div>
 		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
 			
-			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Recreativas')">
+			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Recreativas')" class= "ui-btn4">
 			<img src="images/recreativas.png">
+			<p>Recreativas</p>
 			</a>
-			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Preguntas')">
+			<a href=#page3 data-role="button" data-theme="c" onclick="SetFilter('Preguntas')" class= "ui-btn4">
 			<img src="images/preguntas.png">
+			<p>Preguntas</p>
 			</a>
 			
 					
 		</div>
 		
+		<p>       </p>
+		<div class="mainContent">
+		<ul id="noticiasImportantes" data-role="listview" class="ui-listview" data-theme='a' ></ul>
+		<div>
+		<p>       </p>
 		
 	</div>
 	
@@ -104,9 +115,9 @@
 </div>
 <div data-role='content' id="mainContent" name= "Main content">
 	
-	<div data-role="content" class="ui-content" id='noticias'>
+	<div data-role="content" class="ui-content" id='noticias' data-theme='b'>
 		<p>       </p>
-		<ul id="test" data-role="listview" class="ui-listview" data-theme='a' ></ul>
+		<ul id="testList" data-role="listview" class="ui-listview" data-theme='c' ></ul>
 		<p>       </p>
 	</div>
 
@@ -114,7 +125,10 @@
 </div>
 
 <div data-role="footer" id='foot' data-theme='a'> 
-	<button onclick="LoadMore()" data-role="button" data-theme='a' data-icon='plus'> Load More</button>
+	
+	<a onclick="LoadMore()" data-role="button" data-theme="c" class= "ui-btn3">
+		<img src="images/config.png">
+	</a>
 </div>
 
 </div>
@@ -122,12 +136,15 @@
 
 <script>
 
-	/*var urlVersion="http://localhost/ubaApp/version.php";
-	var urlGetNews='http://localhost/ubaApp/getArticles.php';
-	var urlArt="http://localhost/ubaApp/article/art";*/
-	var urlVersion="http://franas3.p.ht/ubaApp/version.php";
-	var urlGetNews='http://franas3.p.ht/ubaApp/getArticles.php';
-	var urlArt="http://franas3.p.ht/ubaApp/article/art";
+	var urlVersion="http://localhost/server/version.php";
+	var urlGetNews='http://localhost/server/getArticles.php';
+	var urlArt="http://localhost/server/article/art";
+	//var urlVersion="http://franas3.p.ht/ubaApp/version.php";
+	//var urlGetNews='http://franas3.p.ht/ubaApp/getArticles.php';
+	//var urlArt="http://franas3.p.ht/ubaApp/article/art";
+	
+	//var urlImportantes="http://franas3.p.ht/ubaApp/getImportantes.php";
+	var urlImportantes="http://localhost/server/getImportant.php";
 
 	localStorage.clear();
 
@@ -275,7 +292,7 @@
 		
 		function AddToShowList(auxArray){
 			console.log("noticia agregada");
-			newsList+= '<li data-role="list-divider" onclick="Clicked('+auxArray[0]+')">'+auxArray[1] +'</li><li><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p>'+auxArray[5]+'</p></a></li>';
+			newsList+= '<li data-role="list-divider" onclick="Clicked('+auxArray[0]+')" data-theme="a">'+auxArray[1] +'</li><li><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p>'+auxArray[5]+'</p></a></li>';
 			//newsList+= '<li data-role="list-divider">'+auxArray[1] +'<span class="ui-li-count">'+auxArray[4] +' </span></li><li><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p class="li-aside">'+auxArray[2] +', '+ auxArray[3]+'</p><p>'+auxArray[5]+'</p></a></li>';
 			newsLoaded+=1;
 			
@@ -304,7 +321,7 @@
 			if(executed){
 				CleanNews();
 			}
-			$('.ui-listview').append( newsList ).listview("refresh");
+			$('#testList').append( newsList ).listview("refresh");
 			refreshing=false;
 			executed=true;
 			
@@ -344,6 +361,43 @@
 			}
 			//Refresh();
 			
+		}
+		
+		$(document).on("pageinit", "#page1", function () {
+			console.log("entro inicio");
+			Importantes();
+		});
+		
+		var requestI;
+		
+		var importantesList;
+		
+		function Importantes(){
+			console.log("entro importante");
+			if(importantesList!="undefinded"){
+			//	var node= document.getElementById('noticiasImportantes');
+				//while (node.hasChildNodes()){
+//				node.removeChild(node.childNodes[0]);
+	//			}
+		//		$('.ui-listview').append( importantesList ).listview("refresh");
+			}
+			requestI= new XMLHttpRequest();
+			requestI.open('GET',urlImportantes+"?ix=500",true);
+			requestI.onreadystatechange= DownloadImportantes;
+			requestI.send();
+		}
+		
+		function DownloadImportantes(){
+			console.log(requestI.readyState+"     "+requestI.status);
+			if (requestI.readyState==4 && (requestI.status==200)){
+				console.log(requestI.responseText);
+				var node= document.getElementById('noticiasImportantes');
+				while (node.hasChildNodes()){
+					node.removeChild(node.childNodes[0]);
+				}
+				importantesList= requestI.responseText;
+				$('#noticiasImportantes:visible').append( importantesList ).listview("refresh");
+			}
 		}
 		
 </script>
