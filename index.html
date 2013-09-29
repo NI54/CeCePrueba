@@ -3,32 +3,40 @@
 
 <head>
  
-<link rel="stylesheet" href="jquerymobile130.css" />
+<link rel="stylesheet" href="jquerymobile130.css"/>
 <link rel="stylesheet" href="CeCeApp.css" />
-<script src="jquery182min.js"></script>
-<script src="jquerymobile130.js"></script>
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery.mobile-1.3.2.js"></script>
 
 
-<style>
 
-</style>
 
 </head>
 
 <body>
 
-
 <div data-role="page" data-theme="d" id="page1">
+<div align="center">
+<a href="#page7" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
+	<img src="images/LogoBlanco.png">
+</a>
+</div>
+</div>
+
+<div data-role="page" data-theme="d" id="page7">
 	
-	<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false" align="right">
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" >
-			<a href=#page3 data-role="button" data-theme="d" class= "ui-btn2">
+	<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
+		<a href="#page3" data-role="button" data-theme="d" class= "ui-btn2">
+			<img src="images/LogoBlanco.png">
+		</a>
+		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="right" >
+			<a href="#page3" data-role="button" data-theme="d" class= "ui-btn2">
 			<img src="images/facebook.png">
 			</a>
-			<a href=#page3 data-role="button" data-theme="d" class= "ui-btn2">
+			<a href="#page3" data-role="button" data-theme="d" class= "ui-btn2">
 			<img src="images/mail.png">
 			</a>
-			<a href=#page3 data-role="button" data-theme="d" class= "ui-btn2">
+			<a href="#page3" data-role="button" data-theme="d" class= "ui-btn2">
 			<img src="images/twitter.png">
 			</a>
 			
@@ -48,34 +56,34 @@
 	<div data-role='content' id='mainContent5' data-theme="d">
 		
 		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
-			<a href=#page3 data-role="button" data-theme="d" onclick="SetFilter('all')" class= "ui-btn4" >
-				<img src="images/novedades.png" >
-				<p>Novedades</p>
+			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('ComunidadUba')" class= "ui-btn4" >
+				<img src="images/ComunidadUBA.png" > 
+				<!--<p>Novedades</p> !-->
 			</a>			
-			<a href=#page3 data-role="button" data-theme="d" onclick="SetFilter('Comunidad UBA')" class= "ui-btn4">
-			<img src="images/oferta.png">
-			<p>Oferta</p>
+			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('Extensión CBC')" class= "ui-btn4">
+			<img src="images/ExtensionBienestar.png">
+			<!--<p>Oferta</p> !-->
 			</a>
 			</div>
 		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center" >
-			<a href=#page3 data-role="button" data-theme="d" onclick="SetFilter('Tramo')" class= "ui-btn4">
-			<img src="images/tramo.png" >
-			<p>Primer Tramo</p>
+			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('CBC+Vos')" class= "ui-btn4">
+			<img src="images/CBCvos.png" >
+			<!--<p>Primer Tramo</p> !-->
 			</a>
-			<a href=#page3 data-role="button" data-theme="d" onclick="SetFilter('Academicas')" class= "ui-btn4">
-			<img src="images/academicas.png">
-			<p>Academicas</p>
+			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('Agenda CBC')" class= "ui-btn4">
+			<img src="images/Agenda.png">
+			<!--<p>Academicas</p> !-->
 			</a>
 		</div>
 		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
 			
-			<a href=#page3 data-role="button" data-theme="d" onclick="SetFilter('Recreativas')" class= "ui-btn4">
-			<img src="images/recreativas.png">
-			<p>Recreativas</p>
+			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('CBC Deportes')" class= "ui-btn4">
+			<img src="images/Deportes.png">
+			<!-- <p>Recreativas</p> !-->
 			</a>
-			<a href=#page3 data-role="button" data-theme="d" onclick="SetFilter('Preguntas')" class= "ui-btn4">
-			<img src="images/preguntas.png">
-			<p>Preguntas</p>
+			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('GPS')" class= "ui-btn4">
+			<img src="images/GPS.png">
+			<!-- <p>Preguntas</p> !-->
 			</a>
 			
 					
@@ -83,16 +91,15 @@
 		
 		<p>       </p>
 		<div class="mainContent">
-		<ul id="noticiasImportantes" data-role="listview" class="ui-listview" data-theme="d" ></ul>
-		<div>
+		<ul id="noticiasImportantes" data-role="listview" class="ui-listview" data-theme="d" ><li><img src="images/ajaxloader.gif"></li></ul>
 		<p>       </p>
 		
-	</div>
+		</div>
 	
 	<div data-role='footer' id='footer3' data-theme="d" align="center">
-	<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="true">
+			<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="true">
 			</style>
-			<a href=#page3 data-role="button" data-theme="d" class= "ui-btn3">
+			<a href="#pageConfig" data-role="button" data-theme="d" class= "ui-btn3">
 			<img src="images/config.png">
 			</a>
 			<a href=#page3 data-role="button" data-theme="d" class= "ui-btn3">
@@ -103,10 +110,10 @@
 			</a>
 			</div>
 	</div>
-
+	</div>
 </div>
 
-<div data-role="page" data-theme="d" id="page3">
+<div data-role="page" id="page3">
 
 <div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
 	<h1>CeCeApp</h1>
@@ -117,7 +124,7 @@
 	
 	<div data-role="content" class="ui-content" id='noticias' data-theme="d">
 		<p>       </p>
-		<ul id="testList" data-role="listview" class="ui-listview" data-theme="d" ></ul>
+		<ul id="testList" data-role="listview" class="ui-listview" data-theme="d"></ul>
 		<p>       </p>
 	</div>
 
@@ -141,15 +148,15 @@
 	//var urlArt="http://localhost/server/article/art";
 	var urlVersion="http://extensioncbc.com.ar/app/version.php";
 	var urlGetNews='http://extensioncbc.com.ar/app/getArticles.php';
-	var urlArt="http://extensioncbc.com.ar/app/article";
+	var urlArt="http://extensioncbc.com.ar/app/article/art";
 	//var urlVersion="http://franas3.p.ht/ubaApp/version.php";
 	//var urlGetNews='http://franas3.p.ht/ubaApp/getArticles.php';
 	//var urlArt="http://franas3.p.ht/ubaApp/article/art";
 	
 	//var urlImportantes="http://franas3.p.ht/ubaApp/getImportantes.php";
-	var urlImportantes="http://localhost/server/getImportant.php";
+	var urlImportantes="http://extensioncbc.com.ar/app/getImportant.php";
 
-	localStorage.clear();
+	//localStorage.clear();
 
 	var log= document.getElementById('log');
 	var news;
@@ -203,6 +210,7 @@
 			var svVersion= request.responseText;
 			if(svVersion!=lastVersion){
 				newsList='';
+				//arreglar esto luego e_e
 				lastVersion= svVersion;
 				localStorage.setItem('lastVersion', lastVersion);
 				
@@ -324,6 +332,7 @@
 			if(executed){
 				CleanNews();
 			}
+			console.log("apendeados");
 			$('#testList').append( newsList ).listview("refresh");
 			refreshing=false;
 			executed=true;
@@ -332,10 +341,12 @@
 		}
 		
 		function CleanNews(){
-			var node= document.getElementById('test');
-			while (node.hasChildNodes()){
+			var node= document.getElementById('testList');
+			
+			while(node.hasChildNodes()){
 				node.removeChild(node.childNodes[0]);
 			}
+			console.log("cleneadas");
 		}
 		
 		function Clicked(event){
@@ -366,7 +377,7 @@
 			
 		}
 		
-		$(document).on("pageinit", "#page1", function () {
+		$(document).on("pageinit", "#page7", function () {
 			console.log("entro inicio");
 			Importantes();
 		});
@@ -385,7 +396,7 @@
 		//		$('.ui-listview').append( importantesList ).listview("refresh");
 			}
 			requestI= new XMLHttpRequest();
-			requestI.open('GET',urlImportantes+"?ix=500",true);
+			requestI.open('GET',urlImportantes+"?ix=500000",true);
 			requestI.onreadystatechange= DownloadImportantes;
 			requestI.send();
 		}
@@ -394,13 +405,64 @@
 			console.log(requestI.readyState+"     "+requestI.status);
 			if (requestI.readyState==4 && (requestI.status==200)){
 				console.log(requestI.responseText);
-				var node= document.getElementById('noticiasImportantes');
-				while (node.hasChildNodes()){
-					node.removeChild(node.childNodes[0]);
-				}
+				
 				importantesList= requestI.responseText;
-				$('#noticiasImportantes:visible').append( importantesList ).listview("refresh");
+				DownloadAtt(importantesList);
 			}
+			
+			
+		}
+		
+		function DownloadAtt(auxListViewImportantes){
+			var auxIn=0;
+			while(auxIn<3){
+			var stringId= "not"+auxIn;
+			var auxLoco= document.getElementById(stringId);
+			if(auxLoco!=null){
+				 //console.log(auxLoco.attributes[0].value);
+				 //console.log(auxLoco.attributes[1].value);
+				 //console.log(auxLoco.attributes[2].value);
+				// console.log(auxLoco.attributes[3].value);
+			//	 console.log(auxLoco.attributes[4].value);
+			//	 console.log(auxLoco.attributes[5].value);
+			
+				var id=auxLoco.attributes[4].value;
+				var title;
+				var date;
+				var author;
+				var category;
+				var summary;
+				 
+				localStorage.setItem('art'+id,true);
+				localStorage.setItem('art'+auxLoco.attributes[4].value+'.title',auxLoco.attributes[2].value);
+				localStorage.setItem('art'+auxLoco.attributes[4].value+'.author',auxLoco.attributes[5].value);
+				localStorage.setItem('art'+auxLoco.attributes[4].value+'.date',auxLoco.attributes[3].value);
+				localStorage.setItem('art'+auxLoco.attributes[4].value+'.category',auxLoco.attributes[0].value);
+				localStorage.setItem('art'+auxLoco.attributes[4].value+'.summary',auxLoco.attributes[1].value);
+				localStorage.setItem('art'+auxLoco.attributes[4].value+'.id',auxLoco.attributes[4].value);
+				
+				request= new XMLHttpRequest();
+			
+			var aux= localStorage.getItem('art'+auxLoco.attributes[4].value+'.content');
+			
+				if(aux==null||aux=='undefined'){
+				//asincronizar esto
+					request.open("GET",urlArt+auxLoco.attributes[4].value +".txt",false);
+					request.send();
+					localStorage.setItem('art'+auxLoco.attributes[4].value+'.content', request.responseText);
+				}
+			}
+			auxIn+=1;
+			}
+			var node= document.getElementById('noticiasImportantes');
+			while (node.hasChildNodes()){
+				node.removeChild(node.childNodes[0]);
+			}
+			$('#noticiasImportantes:visible').append( auxListViewImportantes ).listview("refresh");
+		}
+		
+		function DeleteDatos(){
+			localStorage.clear();
 		}
 		
 </script>
@@ -417,6 +479,13 @@
 			
 		</div>		
 
+	</div>
+	<div data-role="page" data-theme="d" id="pageConfig">
+		<div align="center">
+		<a onclick="Refresh()" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
+			<p> Borrar Noticias</p>
+		</a>
+		</div>
 	</div>
 
 </body>

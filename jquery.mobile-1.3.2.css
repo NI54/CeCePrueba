@@ -1,6 +1,6 @@
-/*
-* jQuery Mobile 1.3.1
-* Git HEAD hash: 74b4bec049fd93e4fe40205e6157de16eb64eb46 <> Date: Mon Apr 8 2013 19:41:28 UTC
+/*!
+* jQuery Mobile 1.3.2
+* Git HEAD hash: 528cf0e96940644ea644096bfeb913ed920ffaef <> Date: Fri Jul 19 2013 22:17:57 UTC
 * http://jquerymobile.com
 *
 * Copyright 2010, 2013 jQuery Foundation, Inc. and other contributors
@@ -731,7 +731,7 @@ a.ui-link-inherit {
 /* button inner top highlight
 -----------------------------------------------------------------------------------------------------------*/
 .ui-btn-inner {
-	border-top: none;
+	border-top: 1px solid 	#fff;
 	border-color: 			rgba(255,255,255,.3);
 }
 /* corner rounding classes
@@ -763,8 +763,8 @@ a.ui-link-inherit {
 -----------------------------------------------------------------------------------------------------------*/
 .ui-icon,
 .ui-icon-searchfield:after {
-	background-color: 						#666 /*{global-icon-color}*/;
-	background-color: 						rgba(0,0,0,.4) /*{global-icon-disc}*/;
+	background: 						#666 /*{global-icon-color}*/;
+	background: 						rgba(0,0,0,.4) /*{global-icon-disc}*/;
 	background-image: url(images/icons-18-white.png) /*{global-icon-set}*/;
 	background-repeat: no-repeat;
 	-webkit-border-radius: 				9px;
@@ -786,7 +786,7 @@ a.ui-link-inherit {
 .ui-icon-nodisc .ui-icon-alt .ui-icon,
 .ui-icon-nodisc .ui-icon-alt .ui-icon-searchfield:after {
 	background-color: transparent;
-} /* iconos  */
+}
 /* Icon sprite
 -----------------------------------------------------------------------------------------------------------*/
 /* plus minus */
@@ -986,8 +986,8 @@ a.ui-link-inherit {
 /* Button corner class
 -----------------------------------------------------------------------------------------------------------*/
 .ui-btn-corner-all {
-	/*-webkit-border-radius: 				1em /*{global-radii-buttons}*/;
-	/*border-radius: 						1em /*{global-radii-buttons}*/;
+	-webkit-border-radius: 				1em /*{global-radii-buttons}*/;
+	border-radius: 						1em /*{global-radii-buttons}*/;
 }
 /* radius clip workaround for cleaning up corner trapping */
 .ui-corner-all,
@@ -1070,6 +1070,7 @@ a.ui-link-inherit {
 .ui-mobile, .ui-mobile body { height: 99.9%; }
 .ui-mobile fieldset, .ui-page { padding: 0; margin: 0; }
 .ui-mobile a img, .ui-mobile fieldset { border-width: 0; }
+.ui-mobile fieldset { min-width: 0; }
 /* responsive page widths */
 .ui-mobile-viewport { margin: 0; overflow-x: visible; -webkit-text-size-adjust: 100%; -ms-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 /* Issue #2066 */
@@ -1123,12 +1124,10 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-header > .ui-btn-icon-notext,
 .ui-header-fixed.ui-fixed-hidden > .ui-btn-icon-notext { top: 6px; }
 .ui-header-fixed > .ui-btn-icon-notext { top: 7px;}
-/* Seteo header                 */
-.ui-header .ui-title, .ui-footer .ui-title { min-height: 1.1em; text-align: center; font-size: 16px; display: block; padding: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0 !important; }
-
+.ui-header .ui-title, .ui-footer .ui-title { min-height: 1.1em; text-align: center; font-size: 16px; display: block; margin: .6em 30% .8em; padding: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0 !important; }
 .ui-footer .ui-title { margin: .6em 15px .8em; }
 /* content area*/
-.ui-content { border-width: 0; overflow: visible; overflow-x: hidden;}
+.ui-content { border-width: 0; overflow: visible; overflow-x: hidden; padding: 15px; }
 /* corner styling for dialogs and popups */
 .ui-corner-all > .ui-header:first-child,
 .ui-corner-all > .ui-content:first-child,
@@ -2005,7 +2004,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-navbar li .ui-btn-icon-right .ui-icon { right: 6px; }
 /* add border if not in header/footer (full width) */
 .ui-navbar li:last-child .ui-btn,
-.ui-navbar .ui-grid-duo .ui-block-b .ui-btn { margin-right: 0;}
+.ui-navbar .ui-grid-duo .ui-block-b .ui-btn { margin-right: 0; border-right-width: 1px; }
 .ui-header .ui-navbar li:last-child .ui-btn,
 .ui-footer .ui-navbar li:last-child .ui-btn,
 .ui-header .ui-navbar .ui-grid-duo .ui-block-b .ui-btn,
@@ -2033,9 +2032,8 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-mini { margin-top: .25em; margin-bottom: .25em; }
 .ui-btn-left, .ui-btn-right, .ui-input-clear, .ui-btn-inline,
 .ui-grid-a .ui-btn, .ui-grid-b .ui-btn, .ui-grid-c .ui-btn, .ui-grid-d .ui-btn, .ui-grid-e .ui-btn, .ui-grid-solo .ui-btn { margin-right: 5px; margin-left: 5px; }
-/*  padding: .6em 20px  (en el de abajo)   seteo boton de content*/
 .ui-btn-inner { font-size: 16px; padding: .6em 20px; min-width: .75em; display: block; position: relative; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; zoom: 1; }
-.ui-btn input, .ui-btn button { z-index: 2;}
+.ui-btn input, .ui-btn button { z-index: 2; }
 .ui-btn-left, .ui-btn-right, .ui-btn-inline { display: inline-block; vertical-align: middle; }
 .ui-mobile .ui-btn-left, .ui-mobile .ui-btn-right, .ui-btn-left > .ui-btn, .ui-btn-right > .ui-btn { margin: 0; } /* .ui-mobile to increase specificity level */
 .ui-btn-block { display: block; }
@@ -2045,16 +2043,15 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-footer .ui-btn-block { display: block; }
 .ui-header .ui-btn-inner,
 .ui-footer .ui-btn-inner,
-/* boton header y footer*/
-.ui-mini .ui-btn-inner { font-size: 12.5px; padding: 0; border: none;}
+.ui-mini .ui-btn-inner { font-size: 12.5px; padding: .55em 11px .5em; }
 .ui-fullsize .ui-btn-inner,
-.ui-fullsize .ui-btn-inner { font-size: 16px; padding: .6em 20px; border: none}
+.ui-fullsize .ui-btn-inner { font-size: 16px; padding: .6em 20px; }
 .ui-btn-icon-notext { width: 24px; height: 24px; }
 .ui-btn-icon-notext .ui-btn-inner { padding: 0; height: 100%; }
-.ui-btn-icon-notext .ui-btn-inner .ui-icon { margin: 2px 1px 2px 3px; float: left; border: none}
-.ui-btn-text { position: relative; z-index: 1; width: 100%; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; border: none;}
+.ui-btn-icon-notext .ui-btn-inner .ui-icon { margin: 2px 1px 2px 3px; float: left; }
+.ui-btn-text { position: relative; z-index: 1; width: 100%; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; }
 div.ui-btn-text { width: auto; }
-.ui-btn-icon-notext .ui-btn-text { position: absolute; left: -9999px;}
+.ui-btn-icon-notext .ui-btn-text { position: absolute; left: -9999px; }
 .ui-btn-icon-left .ui-btn-inner { padding-left: 40px; }
 .ui-btn-icon-right .ui-btn-inner { padding-right: 40px; }
 .ui-btn-icon-top .ui-btn-inner { padding-top: 40px; }
@@ -2063,7 +2060,6 @@ div.ui-btn-text { width: auto; }
 .ui-footer .ui-btn-icon-left .ui-btn-inner,
 .ui-mini.ui-btn-icon-left .ui-btn-inner,
 .ui-mini .ui-btn-icon-left .ui-btn-inner { padding-left: 30px; }
-
 .ui-header .ui-btn-icon-right .ui-btn-inner,
 .ui-footer .ui-btn-icon-right .ui-btn-inner,
 .ui-mini.ui-btn-icon-right .ui-btn-inner,
@@ -2076,8 +2072,6 @@ div.ui-btn-text { width: auto; }
 .ui-footer .ui-btn-icon-bottom .ui-btn-inner { padding: .55em 3px 30px 3px; }
 .ui-mini.ui-btn-icon-bottom .ui-btn-inner,
 .ui-mini .ui-btn-icon-bottom .ui-btn-inner { padding-bottom: 30px; }
-
-
 /* Corner styling inheritance */
 .ui-btn-inner {
 	-webkit-border-radius: inherit;	
@@ -2179,11 +2173,13 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 .ui-collapsible-set { margin: .5em 0; }
 .ui-collapsible-set .ui-collapsible { margin: -1px 0 0; }
 .ui-collapsible-set .ui-collapsible.ui-first-child { margin-top: 0; }
-.ui-controlgroup, fieldset.ui-controlgroup { padding: 0; margin: .5em 0; zoom: 1;}
+.ui-controlgroup, fieldset.ui-controlgroup { padding: 0; margin: .5em 0; zoom: 1; }
 .ui-controlgroup.ui-mini, fieldset.ui-controlgroup.ui-mini { margin: .25em 0; }
 .ui-field-contain .ui-controlgroup, .ui-field-contain fieldset.ui-controlgroup { margin: 0; }
 .ui-bar .ui-controlgroup { margin: 0 5px; }
 .ui-controlgroup-label { font-size: 16px; line-height: 1.4; font-weight: normal; margin: 0 0 .4em; }
+/* Fixes legend not wrapping on IE10 */
+.ui-controlgroup-label legend {	max-width: 100%; }
 .ui-controlgroup-controls label.ui-select,
 .ui-controlgroup-controls label.ui-submit { position: absolute; left: -9999px; }
 .ui-controlgroup li { list-style: none; }
@@ -2193,7 +2189,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 .ui-controlgroup-horizontal .ui-btn-icon-notext .ui-btn-inner { width: 18px; }
 .ui-controlgroup.ui-mini .ui-btn-icon-notext .ui-btn-inner,
 .ui-header .ui-controlgroup .ui-btn-icon-notext .ui-btn-inner,
-.ui-footer .ui-controlgroup .ui-btn-icon-notext .ui-btn-inner { height: 16px; padding: 0; }
+.ui-footer .ui-controlgroup .ui-btn-icon-notext .ui-btn-inner { height: 16px; padding: .55em 11px .5em 11px; }
 .ui-controlgroup .ui-btn-icon-notext .ui-btn-inner .ui-icon { position: absolute; top: 50%; right: 50%; margin: -9px -9px 0 0; }
 .ui-controlgroup-horizontal .ui-btn-inner { text-align: center; }
 .ui-controlgroup-horizontal.ui-mini .ui-btn-inner { height: 16px; line-height: 16px; }
@@ -2418,7 +2414,7 @@ label.ui-submit { font-size: 16px; line-height: 1.4; font-weight: normal; margin
 }
 .ui-popup > .ui-btn-left { left: -9px; }
 .ui-popup > .ui-btn-right { right: -9px; }
-.ui-popup-hidden { top: -99999px; left: -9999px; }
+.ui-popup-hidden { top: -99999px; left: -9999px; visibility: hidden; }
 .ui-checkbox, .ui-radio { position: relative; clear: both; margin: 0; z-index: 1; }
 .ui-checkbox .ui-btn, .ui-radio .ui-btn { text-align: left; z-index: 2; }
 .ui-controlgroup .ui-checkbox .ui-btn, .ui-controlgroup .ui-radio .ui-btn { margin: 0; }
@@ -2518,6 +2514,8 @@ textarea.ui-mini { height: 45px; }
 .ui-input-search .ui-input-clear-hidden, .ui-input-text .ui-input-clear-hidden { display: none; }
 /* Resolves issue #5166: Added to support issue introduced in Firefox 15. We can likely remove this in the future. */
 input::-moz-placeholder, textarea::-moz-placeholder { color: #aaa; }
+/* For IE10 */
+:-ms-input-placeholder { color: #aaa; }
 /* Resolves issue #5131: Width of textinput depends on its type, for Android 4.1 */
 input[type=number]::-webkit-outer-spin-button { margin: 0; }
 @media all and (min-width: 28em){
@@ -2647,8 +2645,8 @@ ol.ui-listview, ol.ui-listview .ui-li-divider { counter-reset: listnumbering; }
 .ui-listview, .ui-li { list-style: none; padding: 0; }
 .ui-li, .ui-li.ui-field-contain { display: block; margin: 0; position: relative; overflow: visible; text-align: left; border-width: 0; border-top-width: 1px; }
 .ui-li.ui-btn, .ui-li.ui-field-contain, .ui-li-divider, .ui-li-static { margin: 0; }
-.ui-listview-inset .ui-li { border-right-width: 0px; border-left-width: 0px; }
-.ui-li.ui-last-child, .ui-li.ui-field-contain.ui-last-child { border-bottom-width: 0px; }
+.ui-listview-inset .ui-li { border-right-width: 1px; border-left-width: 1px; }
+.ui-li.ui-last-child, .ui-li.ui-field-contain.ui-last-child { border-bottom-width: 1px; }
 .ui-collapsible-content > .ui-listview:not(.ui-listview-inset) > .ui-li.ui-first-child { border-top-width: 0; }
 .ui-collapsible-themed-content .ui-listview:not(.ui-listview-inset) > .ui-li.ui-last-child { border-bottom-width: 0; }
 .ui-li .ui-btn-text a.ui-link-inherit { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
@@ -2717,8 +2715,8 @@ ol.ui-listview > .ui-li .ui-li-desc:not(.ui-li-aside) { text-indent: 1.55em; }
 .ui-li-has-count.ui-li-divider .ui-li-count, .ui-li-has-count .ui-link-inherit .ui-li-count { margin-top: -.95em; }
 .ui-li-has-arrow.ui-li-has-count .ui-li-count { right: 40px; }
 .ui-li-has-alt.ui-li-has-count .ui-li-count { right: 53px; }
-.ui-li-link-alt { position: absolute; width: 40px; height: 100%; border-width: 0; border-left-width: 0px; top: 0; right: 0; margin: 0; padding: 0; z-index: 2; }
-.ui-li-link-alt .ui-btn { overflow: hidden; position: absolute; right: 8px; top: 50%; margin: -13px 0 0 0; border-bottom-width: 0px; z-index: -1;}
+.ui-li-link-alt { position: absolute; width: 40px; height: 100%; border-width: 0; border-left-width: 1px; top: 0; right: 0; margin: 0; padding: 0; z-index: 2; }
+.ui-li-link-alt .ui-btn { overflow: hidden; position: absolute; right: 8px; top: 50%; margin: -13px 0 0 0; border-bottom-width: 1px; z-index: -1;}
 .ui-li-link-alt .ui-btn-inner { padding: 0; height: 100%; position: absolute; width: 100%; top: 0; left: 0;}
 .ui-li-link-alt .ui-btn .ui-icon { right: 50%; margin-right: -9px; }
 .ui-li-link-alt .ui-btn-icon-notext .ui-btn-inner .ui-icon { position: absolute; top: 50%; margin-top: -9px; }
@@ -3093,7 +3091,6 @@ div.ui-slider-switch.ui-mini {
 	/* Make the label elements a percentage width */ 
 	.ui-table-reflow td .ui-table-cell-label,
 	.ui-table-reflow th .ui-table-cell-label { 
-		display: block;
 		padding: .4em; 
 		min-width: 30%; 
 		display: inline-block;
@@ -3371,19 +3368,10 @@ div.ui-slider-switch.ui-mini {
 		display: none;
 	}	
 }
-
-
-
 .ui-btn4{
 	padding: 1em;
 	padding-bottom: 0em;
 	width: 7em;
-	height: auto;
-}
-.ui-btnMain{
-	padding: 1em;
-	padding-bottom: 0em;
-	width: 14em;
 	height: auto;
 }
 .ui-btn2{

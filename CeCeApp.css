@@ -595,7 +595,7 @@ a.ui-link-inherit {
 /* button inner top highlight
 -----------------------------------------------------------------------------------------------------------*/
 .ui-btn-inner {
-	border-top: 1px solid 	#fff;
+	border-top: none;
 	border-color: 			rgba(255,255,255,.3);
 }
 /* corner rounding classes
@@ -881,7 +881,7 @@ a.ui-link-inherit {
 /* button inner top highlight
 -----------------------------------------------------------------------------------------------------------*/
 .ui-btn-inner {
-	border-top: 1px solid 	#fff;
+	border-top: none;
 	border-color: 			rgba(255,255,255,.3);
 }
 /* corner rounding classes
@@ -1216,4 +1216,4 @@ a.ui-link-inherit {
 	outline-width: 1px;
 	outline-style: auto;
 }
-						img{	max-width: 100%;}.scalablePrueba{	width: 10em;}img.academicas{width: 50px;background:url(academicas.png) 0 0;}img.facebook{width:50px;height:50px;background:url(Plancha_Iconografica.png) -50px 0;}img.garraham{width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px 0;}img.mail{width:50px;height:50px;background:url(Plancha_Iconografica.png) -150px 0;}img.oferta{width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px 0;}img.preguntas{width:50px;height:50px;background:url(Plancha_Iconografica.png) 0.5px -50px;}img.tramo{width:50px;height:50px;height: 20%;background:url(Plancha_Iconografica.png) -50px -50px;}img.profesional{width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px -50px;}img.recreativas{width:50px;height:50px;background:url(Plancha_Iconografica.png) -150px -50px;}img.twitter{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px -50px;}img.web{	width:50px;height:50px;background:url(Plancha_Iconografica.png) 0px -100px;}img.brujula{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -50px -100px;}img.calendario{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px -100px;}img.novedades{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px -100px;}img.check{	width:20px;height:25px;background:url(Plancha_Iconografica.png) 0px -151px;}img.cerrar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -20px -151px;}img.borrar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -45px -151px;}img.actualizar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -45px -151px;}
+						img{	max-width: 100%;}.scalablePrueba{	width: 10em;}img.academicas{width: 50px;background:url(academicas.png) 0 0;}img.facebook{width:50px;height:50px;background:url(Plancha_Iconografica.png) -50px 0;}img.garraham{width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px 0;}img.mail{width:50px;height:50px;background:url(Plancha_Iconografica.png) -150px 0;}img.oferta{width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px 0;}img.preguntas{width:50px;height:50px;background:url(Plancha_Iconografica.png) 0.5px -50px;}img.tramo{width:50px;height:50px;height: 20%;background:url(Plancha_Iconografica.png) -50px -50px;}img.profesional{width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px -50px;}img.recreativas{width:50px;height:50px;background:url(Plancha_Iconografica.png) -150px -50px;}img.twitter{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px -50px;}img.web{	width:50px;height:50px;background:url(Plancha_Iconografica.png) 0px -100px;}img.brujula{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -50px -100px;}img.calendario{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px -100px;}img.novedades{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px -100px;}img.check{	width:20px;height:25px;background:url(Plancha_Iconografica.png) 0px -151px;}img.cerrar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -20px -151px;}img.borrar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -45px -151px;}img.actualizar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -45px -151px;}
