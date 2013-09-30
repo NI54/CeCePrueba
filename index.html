@@ -118,7 +118,9 @@
 
 <div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
 	<h1>SEUBE APP</h1>
-	<button onclick="history.go(-1)" data-role="button" data-theme="d" data-icon='back' > Back</button>
+	<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
+			<img src="images/volver.png">
+			</a>
 	<button onclick="Refresh()" data-role="button" data-theme="d" data-icon='refresh'> Refresh</button>
 </div>
 <div data-role='content' id="mainContent" name= "Main content">
@@ -134,8 +136,8 @@
 
 <div data-role="footer" id='foot' data-theme="d"> 
 	
-	<a onclick="LoadMore()" data-role="button" data-theme="d" class= "ui-btn3">
-		<img src="images/config.png">
+	<a onclick="LoadMore()" data-role="button" data-theme="b" class= "ui-btn2">
+		<img src="images/masNoticias.png">
 	</a>
 </div>
 
@@ -485,7 +487,9 @@
 	<div data-role="page" data-theme="d" id="page2">
 		<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
 			<h1 id='titulo'> Titulo </h1>
-			<button onclick="history.go(-1)" data-role="button" data-theme="d" data-icon='back'> Back</button>
+			<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
+			<img src="images/volver.png">
+			</a>
 		</div>
 		<div data-role='content' id="mainContent4" name= "news content">
 			<div data-role='header' id='estadoHdr' data-theme="c"> <p id="sub" class="bajada"> Sub</p></div>
@@ -498,7 +502,9 @@
 	<div data-role="page" data-theme="d" id="pageConfig">
 		<div data-role='header' id="hdConfig" data-theme="d" name="hdrConfig" data-nobackbtn="false">
 			<h1 id='titulo'> Ajustes </h1>
-			<button onclick="history.go(-1)" data-role="button" data-theme="d" data-icon='back' > Back</button>
+			<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
+			<img src="images/volver.png">
+			</a>
 		</div>
 		<div align="center">
 		<a onclick="Refresh()" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
