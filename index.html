@@ -19,6 +19,7 @@
 <div align="center">
 <a href="#page7" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
 	<img src="images/LogoBlanco.png">
+	<p> Pulse para iniciar</p>
 </a>
 </div>
 </div>
@@ -26,8 +27,8 @@
 <div data-role="page" data-theme="d" id="page7">
 	
 	<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
-		<a data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/logo e+b BN.gif">
+		<a data-role="button" data-theme="d" class= "ui-btn5">
+			<img src="images/logo.png">
 		</a>
 		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="right" >
 			<a href="https://www.facebook.com/cbcextension?fref=ts" data-role="button" data-theme="d" class= "ui-btn2">
@@ -47,7 +48,7 @@
 	
 	<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false" >
 		
-		<h1 class="scalado">CECE App</h1>
+		<h1 class="scalado">SEUBE APP</h1>
 		
 		
 	</div>
@@ -116,7 +117,7 @@
 <div data-role="page" id="page3">
 
 <div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
-	<h1>CeCeApp</h1>
+	<h1>SEUBE APP</h1>
 	<button onclick="history.go(-1)" data-role="button" data-theme="d" data-icon='back' > Back</button>
 	<button onclick="Refresh()" data-role="button" data-theme="d" data-icon='refresh'> Refresh</button>
 </div>
@@ -484,10 +485,10 @@
 	<div data-role="page" data-theme="d" id="page2">
 		<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
 			<h1 id='titulo'> Titulo </h1>
-			<button onclick="history.go(-1)" data-role="button" data-theme="d" data-icon='back' > Back</button>
+			<button onclick="history.go(-1)" data-role="button" data-theme="d" data-icon='back'> Back</button>
 		</div>
 		<div data-role='content' id="mainContent4" name= "news content">
-			<div data-role='header' id='estadoHdr' data-theme="d"> <h6 id="sub"> Sub</h6></div>
+			<div data-role='header' id='estadoHdr' data-theme="c"> <p id="sub" class="bajada"> Sub</p></div>
 			<div data-role='content' id='asd5' name= 'asd5' data-theme="d">
 			</div>
 			
@@ -495,6 +496,10 @@
 
 	</div>
 	<div data-role="page" data-theme="d" id="pageConfig">
+		<div data-role='header' id="hdConfig" data-theme="d" name="hdrConfig" data-nobackbtn="false">
+			<h1 id='titulo'> Ajustes </h1>
+			<button onclick="history.go(-1)" data-role="button" data-theme="d" data-icon='back' > Back</button>
+		</div>
 		<div align="center">
 		<a onclick="Refresh()" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
 			<p> Borrar Noticias</p>

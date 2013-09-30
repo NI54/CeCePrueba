@@ -3388,8 +3388,14 @@ div.ui-slider-switch.ui-mini {
 }
 .ui-btn2{
 	
-	width: 3em;
+	width: 2em;
 	height: auto;
+}
+.ui-btn5{
+	
+	width: 2em;
+	height: auto;
+	margin-bottom: 10em;
 }
 .ui-btn3{
 	
@@ -3422,4 +3428,13 @@ body {
 
 .scalado{
 	font-size: 10em;
+}
+
+.bajada{
+	font-size: 0.7em;
+}
+.ui-buttonPeque{
+	
+	width: 2em;
+	height: auto;
 }
