@@ -1,6 +1,12 @@
+<?php
+	session_start();
+	if(!session_is_registered(myusername)){
+	header("location:main_login.php");
+	}
+?>
 <!DOCTYPE HTML>
 <html>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <head>
  
 <link rel="stylesheet" href="jquerymobile130.css"/>
@@ -9,121 +15,18 @@
 <script src="jquery.mobile-1.3.2.js"></script>
 
 
-
-
 </head>
 
 <body>
 
-<div data-role="page" data-theme="d" id="page1">
-<div align="center">
-<a href="#page7" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
-	<img src="images/LogoVertical.png">
-	<p> Pulse para iniciar</p>
-</a>
-</div>
-</div>
-
-<div data-role="page" data-theme="d" id="page7">
-	
-	<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false" class="header-nopad">
-		<a data-role="button" data-theme="d" class= "ui-btn3">
-			<img src="images/LogoHorizontal.png">
-		</a>
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="right" >
-			<a href="https://www.facebook.com/cbcextension?fref=ts" data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/facebook.png">
-			</a>
-			<!--<a href="#page3" data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/mail.png">
-			</a>!-->
-			<a href="https://twitter.com/extensioncbc" data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/twitter.png">
-			</a>
-			
-		</div>
-		
-		
-	</div>
-	
-	<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false" >
-		
-		<h1 class="scalado">SEUBE APP</h1>
-		
-		
-	</div>
-	
-	
-	<div data-role='content' id='mainContent5' data-theme="d">
-		
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('ComunidadUba')" class= "ui-btn4" >
-				<img src="images/ComunidadUBA.png" > 
-				<!--<p>Novedades</p> !-->
-			</a>			
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('Extension CBC')" class= "ui-btn4">
-			<img src="images/ExtensionBienestar.png">
-			<!--<p>Oferta</p> !-->
-			</a>
-			</div>
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center" >
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('CBC+Vos')" class= "ui-btn4">
-			<img src="images/CBCvos.png" >
-			<!--<p>Primer Tramo</p> !-->
-			</a>
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('Agenda CBC')" class= "ui-btn4">
-			<img src="images/Agenda.png">
-			<!--<p>Academicas</p> !-->
-			</a>
-		</div>
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
-			
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('CBC Deportes')" class= "ui-btn4">
-			<img src="images/Deportes.png">
-			<!-- <p>Recreativas</p> !-->
-			</a>
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('GPS')" class= "ui-btn4">
-			<img src="images/GPS.png">
-			<!-- <p>Preguntas</p> !-->
-			</a>
-			
-					
-		</div>
-		
-		<p>       </p>
-		<div class="mainContent">
-		<ul id="noticiasImportantes" data-role="listview" class="ui-listview" data-theme="d" ><li><img src="images/ajaxloader.gif"></li></ul>
-		<p>       </p>
-		
-		</div>
-	
-	<div data-role='footer' id='footer3' data-theme="d" align="center">
-			<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="true">
-			</style>
-			<a href="#pageConfig" data-role="button" data-theme="d" class= "ui-btn7">
-			<img src="images/Configuracion-recuadro.png">
-			</a>
-			<!--<a href=#page3 data-role="button" data-theme="d" class= "ui-btn3">
-			<img src="images/actualizar.png">
-			</a>
-			<a href=#page3 data-role="button" data-theme="d" class= "ui-btn3">
-				<img src="images/buscar.png">
-			</a> !-->
-			</div>
-	</div>
-	</div>
-</div>
-
-<div data-role="page" id="page3">
+<div data-role="page" id="page1">
 
 <div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
 	<h1>SEUBE APP</h1>
 	<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
-			<img src="images/Volver-recuadro.png">
+			<img src="images/volver.png">
 			</a>
-	<a onclick="Refresh()" data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/Actualizar-recuadro.png">
-			</a>
+	<button onclick="Refresh()" data-role="button" data-theme="d" data-icon='refresh'> Refresh</button>
 </div>
 <div data-role='content' id="mainContent" name= "Main content">
 	
@@ -136,12 +39,6 @@
 
 </div>
 
-<div data-role="footer" id='foot' data-theme="d"> 
-	
-	<a onclick="LoadMore()" data-role="button" data-theme="b" class= "ui-btn2">
-		<img src="images/MasNoticias-recuadro.png">
-	</a>
-</div>
 
 </div>
 
@@ -152,8 +49,8 @@
 	//var urlGetNews='http://localhost/server/getArticles.php';
 	//var urlArt="http://localhost/server/article/art";
 	var urlVersion="http://extensioncbc.com.ar/app/version.php";
-	var urlGetNews='http://extensioncbc.com.ar/app/getArticles.php';
-	var urlArt="http://extensioncbc.com.ar/app/article/art";
+	var urlGetNews='managerNoticias.php';
+	var urlArt="article/art";
 	//var urlVersion="http://franas3.p.ht/ubaApp/version.php";
 	//var urlGetNews='http://franas3.p.ht/ubaApp/getArticles.php';
 	//var urlArt="http://franas3.p.ht/ubaApp/article/art";
@@ -165,7 +62,7 @@
 
 	var log= document.getElementById('log');
 	var news;
-	var cuantity=10;
+	var cuantity=100000;
 	var lastVersion=0;
 	var request;
 	var newsLoaded=0;
@@ -176,9 +73,10 @@
 	
 	var section="all";
 
-	$(document).on("pageinit", "#page3", function () {
+	$(document).on("pageinit", "#page1", function () {
 		console.log("entro");
-		Refresh();
+		//Refresh();
+		 RequestNews(0);
 	});
 	
 	function trace(text){
@@ -193,60 +91,24 @@
 	
 		if(!refreshing){
 			console.log("entro refresh");
-			refreshing=true;
-			SetStatus('Comprobando datos...');			
-			news=new Array(cuantity);
-			if(localStorage.getItem('lastVersion')==null){
-				localStorage.setItem('lastVersion', lastVersion);
-			}else{
-				lastVersion= localStorage.getItem('lastVersion');
-			}
-			request= new XMLHttpRequest();
-			request.open('GET',urlVersion,true);
-			request.onreadystatechange= CheckVersion;
-			request.send();
+			RequestNews("10000");
 		}
 	}
 	
 	function CheckVersion(){
-		console.log("state"+request.readyState+"   status"+request.status);
-		if (request.readyState==4 && (request.status==200)){
-			console.log("entro2");
-			var svVersion= request.responseText;
-			if(svVersion!=lastVersion){
-				newsList='';
-				//arreglar esto luego e_e
-				lastVersion= svVersion;
-				localStorage.setItem('lastVersion', lastVersion);
-				
-				SetStatus('Descargando noticias...');
-				lastVersion+=1;
-				RequestNews(lastVersion);
-				
-			}else{
-				if(!executed){
-					newsList='';
-					lastId=lastVersion;
-					SetStatus('Accediendo noticias...');
-					SearchStoredNews();
-					AppendArticles();
-				}else{
-					SetStatus('Actualizado');
-					refreshing=false;
-				}
-			}	
-			
-		}
+		
 	}
 	
 	function RequestNews(index){
+		console.log("pide new");
 		request= new XMLHttpRequest();
-		request.open('GET',urlGetNews+'?cu='+cuantity+'&ca='+section+'&ix='+index,true);
+		request.open('GET',urlGetNews+"?id="+index,true);
 		request.onreadystatechange=CheckLastNews;
 		request.send();
 	}
 		
 		function CheckLastNews(){
+			console.log(request.status);
 			if (request.readyState==4 && request.status==200){
 				if(request.responseText!=''){
 					newsLoaded=0;
@@ -308,11 +170,28 @@
 		
 		function AddToShowList(auxArray){
 			console.log("noticia agregada");
-			newsList+= '<li data-role="list-divider" onclick="Clicked('+auxArray[0]+')" data-theme="d">'+auxArray[1] +'</li><li><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p>'+auxArray[5]+'</p></a></li>';
+			console.log(auxArray[0]);
+			newsList+= '<li id="id'+auxArray[0]+'"data-role="list-divider" onclick="Clicked('+auxArray[0]+')" data-theme="d">'+auxArray[1] +'</li><li id="b'+auxArray[0]+'"><a onclick="Borrar('+auxArray[0]+')" data-transition="slide"><p>Borrar</p></a></li><li id="e'+auxArray[0]+'"><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p>Ver nota</p></a></li><li id="i'+auxArray[0]+'"><a onclick="MakeImportant('+auxArray[0]+')" data-transition="slide"><p>Hacerla Importante</p></a></li>';
 			//newsList+= '<li data-role="list-divider">'+auxArray[1] +'<span class="ui-li-count">'+auxArray[4] +' </span></li><li><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p class="li-aside">'+auxArray[2] +', '+ auxArray[3]+'</p><p>'+auxArray[5]+'</p></a></li>';
 			newsLoaded+=1;
-			
+			//<li id="e'+auxArray[0]+'"><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p>Editar</p></a></li>
 			lastId=auxArray[0];
+		}
+		
+		function Borrar(idNota){
+		var Brequest= new XMLHttpRequest();
+		Brequest.open('GET',"deleteNews.php?id="+idNota,true);
+		Brequest.send();
+		$('#id'+idNota).remove();
+		$('#b'+idNota).remove();
+		$('#e'+idNota).remove();
+		$('#i'+idNota).remove();
+		}
+		
+		function MakeImportant(idNota){
+			var Brequest= new XMLHttpRequest();
+			Brequest.open('GET',"makeImportant.php?id="+idNota,true);
+			Brequest.send();
 		}
 		
 		function SearchStoredNews(){
@@ -345,6 +224,12 @@
 			//SetStatus('Actualizado');
 		}
 		
+		function RemoveNode(idNode){
+			var node= document.getElementById('testList');
+			node.removeChild(node.childNodes[idNode]);
+			$('#testList').listview("refresh");
+		}
+		
 		function CleanNews(){
 			var node= document.getElementById('testList');
 			
@@ -366,16 +251,16 @@
 			/*SearchStoredNews();
 			AppendArticles();*/
 			
-			RequestNews(lastId);
+			//RequestNews(lastId);
 		}
 		
 		function SetFilter(filter){
-			section=filter;
+			section='all';
 			if(executed){
 				CleanNews();
 				news=new Array(cuantity);
 				newsList='';
-				RequestNews(lastVersion);
+				//RequestNews(lastVersion);
 				console.log("asdas"+newsList);
 			}
 			//Refresh();
@@ -435,8 +320,7 @@
 				var author;
 				var category;
 				var summary;
-				
-				Array.prototype.slice.call(document.getElementById(stringId).attributes).forEach(function(item) {
+			Array.prototype.slice.call(document.getElementById(stringId).attributes).forEach(function(item) {
 				if(item.name=="author"){
 					author= item.value;
 				}
@@ -491,7 +375,7 @@
 		<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
 			<h1 id='titulo'> Titulo </h1>
 			<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
-			<img src="images/Volver-recuadro.png">
+			<img src="images/volver.png">
 			</a>
 		</div>
 		<div data-role='content' id="mainContent4" name= "news content">
@@ -506,11 +390,11 @@
 		<div data-role='header' id="hdConfig" data-theme="d" name="hdrConfig" data-nobackbtn="false">
 			<h1 id='titulo'> Ajustes </h1>
 			<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
-			<img src="images/Volver-recuadro.png">
+			<img src="images/volver.png">
 			</a>
 		</div>
 		<div align="center">
-		<a onclick="DeleteDatos()" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
+		<a onclick="Refresh()" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
 			<p> Borrar Noticias</p>
 		</a>
 		</div>
