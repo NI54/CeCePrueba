@@ -629,7 +629,7 @@ a.ui-link-inherit {
 .ui-icon-searchfield:after {
 	background: #f05b14 /*{global-icon-color}*/;
 	background: rgba(240,91,20,1) /*{global-icon-disc}*/;
-	background-image: url(images/icons-18-white.png) /*{global-icon-set}*/;
+	background-image: url(images/icons18white.png) /*{global-icon-set}*/;
 	background-repeat: no-repeat;
 	-webkit-border-radius: 				9px;
 	border-radius: 						9px;
@@ -640,7 +640,7 @@ a.ui-link-inherit {
 .ui-icon-alt .ui-icon-searchfield:after {
 	background-color: 						#fff;
 	background-color: 						rgba(255,255,255,.3);
-	background-image: url(images/icons-18-black.png);
+	background-image: url(images/icons18black.png);
 	background-repeat: no-repeat;
 }
 /* No disc
@@ -745,14 +745,14 @@ a.ui-link-inherit {
 	.ui-icon-grid, .ui-icon-star, .ui-icon-alert, .ui-icon-info, .ui-icon-home, .ui-icon-bars, .ui-icon-edit,
 	.ui-icon-search, .ui-icon-searchfield:after, 
 	.ui-icon-checkbox-off, .ui-icon-checkbox-on, .ui-icon-radio-off, .ui-icon-radio-on {
-		background-image: url(images/icons-36-white.png);
+		background-image: url(images/icons36white.png);
 		-moz-background-size: 864px 18px;
 		-o-background-size: 864px 18px;
 		-webkit-background-size: 864px 18px;
 		background-size: 864px 18px;
 	}
 	.ui-icon-alt .ui-icon {
-		background-image: url(images/icons-36-black.png);
+		background-image: url(images/icons36black.png);
 	}
 	.ui-icon-plus {
 		background-position: 	0 50%;
@@ -844,7 +844,7 @@ a.ui-link-inherit {
 }
 /* loading icon */
 .ui-icon-loading {
-	background: url(images/ajax-loader.gif);
+	background: url(images/ajaxloader.gif);
 	background-size: 46px 46px;
 }
 
@@ -915,7 +915,7 @@ a.ui-link-inherit {
 .ui-icon-searchfield:after {
 	background: #f05b14 /*{global-icon-color}*/;
 	background: rgba(240,91,20,1) /*{global-icon-disc}*/;
-	background-image: url(images/icons-18-white.png) /*{global-icon-set}*/;
+	background-image: url(images/icons18white.png) /*{global-icon-set}*/;
 	background-repeat: no-repeat;
 	-webkit-border-radius: 				9px;
 	border-radius: 						9px;
@@ -926,7 +926,7 @@ a.ui-link-inherit {
 .ui-icon-alt .ui-icon-searchfield:after {
 	background-color: 						#fff;
 	background-color: 						rgba(255,255,255,.3);
-	background-image: url(images/icons-18-black.png);
+	background-image: url(images/icons18black.png);
 	background-repeat: no-repeat;
 }
 /* No disc
@@ -1031,14 +1031,14 @@ a.ui-link-inherit {
 	.ui-icon-grid, .ui-icon-star, .ui-icon-alert, .ui-icon-info, .ui-icon-home, .ui-icon-bars, .ui-icon-edit,
 	.ui-icon-search, .ui-icon-searchfield:after, 
 	.ui-icon-checkbox-off, .ui-icon-checkbox-on, .ui-icon-radio-off, .ui-icon-radio-on {
-		background-image: url(images/icons-36-white.png);
+		background-image: url(images/icons36white.png);
 		-moz-background-size: 864px 18px;
 		-o-background-size: 864px 18px;
 		-webkit-background-size: 864px 18px;
 		background-size: 864px 18px;
 	}
 	.ui-icon-alt .ui-icon {
-		background-image: url(images/icons-36-black.png);
+		background-image: url(images/icons36black.png);
 	}
 	.ui-icon-plus {
 		background-position: 	0 50%;
@@ -1130,7 +1130,7 @@ a.ui-link-inherit {
 }
 /* loading icon */
 .ui-icon-loading {
-	background: url(images/ajax-loader.gif);
+	background: url(images/ajaxloader.gif);
 	background-size: 46px 46px;
 }
 /* Button corner class
@@ -1216,4 +1216,4 @@ a.ui-link-inherit {
 	outline-width: 1px;
 	outline-style: auto;
 }
-						img{	max-width: 100%;}.scalablePrueba{	width: 10em;}img.academicas{width: 50px;background:url(academicas.png) 0 0;}img.facebook{width:50px;height:50px;background:url(Plancha_Iconografica.png) -50px 0;}img.garraham{width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px 0;}img.mail{width:50px;height:50px;background:url(Plancha_Iconografica.png) -150px 0;}img.oferta{width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px 0;}img.preguntas{width:50px;height:50px;background:url(Plancha_Iconografica.png) 0.5px -50px;}img.tramo{width:50px;height:50px;height: 20%;background:url(Plancha_Iconografica.png) -50px -50px;}img.profesional{width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px -50px;}img.recreativas{width:50px;height:50px;background:url(Plancha_Iconografica.png) -150px -50px;}img.twitter{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px -50px;}img.web{	width:50px;height:50px;background:url(Plancha_Iconografica.png) 0px -100px;}img.brujula{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -50px -100px;}img.calendario{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px -100px;}img.novedades{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px -100px;}img.check{	width:20px;height:25px;background:url(Plancha_Iconografica.png) 0px -151px;}img.cerrar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -20px -151px;}img.borrar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -45px -151px;}img.actualizar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -45px -151px;}
+						img{	max-width: 100%;}.scalablePrueba{	width: 10em;}img.academicas{width: 50px;background:url(academicas.png) 0 0;}img.facebook{width:50px;height:50px;background:url(PlanchaIconografica.png) -50px 0;}img.garraham{width:50px;height:50px;background:url(PlanchaIconografica.png) -100px 0;}img.mail{width:50px;height:50px;background:url(Plancha_Iconografica.png) -150px 0;}img.oferta{width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px 0;}img.preguntas{width:50px;height:50px;background:url(Plancha_Iconografica.png) 0.5px -50px;}img.tramo{width:50px;height:50px;height: 20%;background:url(Plancha_Iconografica.png) -50px -50px;}img.profesional{width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px -50px;}img.recreativas{width:50px;height:50px;background:url(Plancha_Iconografica.png) -150px -50px;}img.twitter{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px -50px;}img.web{	width:50px;height:50px;background:url(Plancha_Iconografica.png) 0px -100px;}img.brujula{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -50px -100px;}img.calendario{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -100px -100px;}img.novedades{	width:50px;height:50px;background:url(Plancha_Iconografica.png) -200px -100px;}img.check{	width:20px;height:25px;background:url(Plancha_Iconografica.png) 0px -151px;}img.cerrar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -20px -151px;}img.borrar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -45px -151px;}img.actualizar{	width:25px;height:25px;background:url(Plancha_Iconografica.png) -45px -151px;}
