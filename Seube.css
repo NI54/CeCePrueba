@@ -769,7 +769,8 @@ body {
 }
 
 .imageNotaMenu{
-	width:8.37em;height:3.2625em;
+	/*width:8.37em;height:3.2625em;*/
+	width:7.533em;height:2.9385em;
 	/*border:1px solid black;border-radius:0.5em;*/
 }
 .newsContainer{
