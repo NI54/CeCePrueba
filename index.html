@@ -1,523 +1,238 @@
-<!DOCTYPE HTML>
 <html>
 
 <head>
- 
-<link rel="stylesheet" href="jquerymobile130.css"/>
-<link rel="stylesheet" href="CeCeApp.css" />
-<script src="jquery191.js"></script>
-<script src="jquerymobile132.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+<link rel="stylesheet" href="jquery.mobile.custom.structure.css" />
+<link rel="stylesheet" href="Seube.css"/>
+
+<script src="jquery-1.9.1.min.js"></script> 
+<script src="jquery.mobile-1.4.2.js"></script> 
+<script src="newsGet.js"></script>
+<script src="header.js"></script> 
+<script src="phonegap.js"></script>
+<!--<script src="footer.js"></script>!-->
+
+<style>
+@font-face
+{
+font-family: HelveticaNeue;
+src: "font/HelveticaNeueLTStd-Bd.otf";
+}
+
+.ui-page {
+background:#ffffff;
+}
+</style>
 
 
 
 </head>
 
+
 <body>
-
-<div data-role="page" data-theme="d" id="page1">
-<div align="center">
-<a href="#page7" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
-	<img src="images/LogoVertical.png">
-	<p> Pulse para iniciar</p>
-</a>
-</div>
-</div>
-
-<div data-role="page" data-theme="d" id="page7">
+		
 	
-	<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false" class="header-nopad">
-		<a data-role="button" data-theme="d" class= "ui-btn3">
-			<img src="images/LogoHorizontal.png">
-		</a>
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="right" >
-			<a href="https://www.facebook.com/cbcextension?fref=ts" data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/facebook.png">
-			</a>
-			<!--<a href="#page3" data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/mail.png">
-			</a>!-->
-			<a href="https://twitter.com/extensioncbc" data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/twitter.png">
-			</a>
+		<div id="testList" data-role="page" style="background:#ffffff">
+		<style>
+		.ui-page {
+		background:#ffffff;
+		}
+		</style>
+		
+		
+		<script>
+		InitializeHead("#testList");
+		
+		
+		</script>
+		
+		<div role="main" class="ui-content" id="asd" style="background:#ffffff;">
+			<div><img src="images/Header.png" class="imgHeaderInvi" > </div>
 			
-		</div>
-		
-		
-	</div>
-	
-	<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false" >
-		
-		<h1 class="scalado">E+B UBA CBC Mobile</h1>
-		
-		
-	</div>
-	
-	
-	<div data-role='content' id='mainContent5' data-theme="d">
-		
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('ComunidadUba')" class= "ui-btn4" >
-				<img src="images/Comunidad.png" > 
-				
-				<!--<p>Novedades</p> !-->
-			</a>			
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('Extension CBC')" class= "ui-btn4">
-			<img src="images/ExtensionBienestar.png">
-			<!--<p>Oferta</p> !-->
-			</a>
+			<!--<img src="images/Bkg.png"  style="position:fixed;left:30%;width:20em;top:10em"> !-->
+			<a href="#left-panel"><img src="images/Menu.png" style="position:fixed;width:auto;top:22%;left:-0.1%;height:60%;z-index:2;"></a>
+			<div style="position:fixed;height:100%;border-right-width:0.02em;border-style:solid;top:0;left:0;z-index:1000;
+border-color:#518e88;"></div>
+			
+			
+			<div id="ComunidadUba" filter="ComunidadUba" class="newsContainer" >
+			<img src='images/ajax-loader.gif' align='center' style='display:block;'>
 			</div>
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center" >
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('CBC+Vos')" class= "ui-btn4">
-			<img src="images/CBCvos.png" >
-			<!--<p>Primer Tramo</p> !-->
-			</a>
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('Agenda CBC')" class= "ui-btn4">
-			<img src="images/Agenda.png">
-			<!--<p>Academicas</p> !-->
-			</a>
-		</div>
-		<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="false" align="center">
-			
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('CBC Deportes')" class= "ui-btn4">
-			<img src="images/Deportes.png">
-			<!-- <p>Recreativas</p> !-->
-			</a>
-			<a href="#page3" data-role="button" data-theme="d" onclick="SetFilter('GPS')" class= "ui-btn4">
-			<img src="images/GPS.png">
-			<!-- <p>Preguntas</p> !-->
-			</a>
-			
-					
-		</div>
-		
-		<p>       </p>
-		<div class="mainContent">
-		<ul id="noticiasImportantes" data-role="listview" class="ui-listview" data-theme="d" ><li><img src="images/ajaxloader.gif"></li></ul>
-		<p>       </p>
-		
-		</div>
-	
-	<div data-role='footer' id='footer3' data-theme="d" align="center">
-			<div data-role="controlgroup" data-type="horizontal" data-mini="false" data-corners="true">
-			</style>
-			<a href="#pageConfig" data-role="button" data-theme="d" class= "ui-btn7">
-			<img src="images/Configuracionrecuadro.png">
-			</a>
-			<!--<a href=#page3 data-role="button" data-theme="d" class= "ui-btn3">
-			<img src="images/actualizar.png">
-			</a>
-			<a href=#page3 data-role="button" data-theme="d" class= "ui-btn3">
-				<img src="images/buscar.png">
-			</a> !-->
+			<div id="ExtensionCBC" filter="ExtensionCBC" class="newsContainer" >
+			<img src='images/ajax-loader.gif' align='center' style='display:block;'>
 			</div>
-	</div>
-	</div>
-</div>
-
-<div data-role="page" id="page3">
-
-<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
-	<h1>E+B UBA CBC Mobile</h1>
-	<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
-			<img src="images/Volverrecuadro.png">
-			</a>
-	<a onclick="Refresh()" data-role="button" data-theme="d" class= "ui-btn2">
-			<img src="images/Actualizarrecuadro.png">
-			</a>
-</div>
-<div data-role='content' id="mainContent" name= "Main content">
-	
-	<div data-role="content" class="ui-content" id='noticias' data-theme="d">
-		<p>       </p>
-		<ul id="testList" data-role="listview" class="ui-listview" data-theme="d"></ul>
-		<p>       </p>
-	</div>
-
-
-</div>
-
-<div data-role="footer" id='foot' data-theme="d"> 
-	
-	<a onclick="LoadMore()" data-role="button" data-theme="b" class= "ui-btn2">
-		<img src="images/MasNoticiasrecuadro.png">
-	</a>
-</div>
-
-</div>
-
-
-<script>
-
-	//var urlVersion="http://localhost/server/version.php";
-	//var urlGetNews='http://localhost/server/getArticles.php';
-	//var urlArt="http://localhost/server/article/art";
-	var urlVersion="http://extensioncbc.com.ar/app/version.php";
-	var urlGetNews='http://extensioncbc.com.ar/app/getArticles.php';
-	var urlArt="http://extensioncbc.com.ar/app/article/art";
-	//var urlVersion="http://franas3.p.ht/ubaApp/version.php";
-	//var urlGetNews='http://franas3.p.ht/ubaApp/getArticles.php';
-	//var urlArt="http://franas3.p.ht/ubaApp/article/art";
-	
-	//var urlImportantes="http://franas3.p.ht/ubaApp/getImportantes.php";
-	var urlImportantes="http://extensioncbc.com.ar/app/getImportant.php";
-
-	//localStorage.clear();
-
-	var log= document.getElementById('log');
-	var news;
-	var cuantity=10;
-	var lastVersion=0;
-	var request;
-	var newsLoaded=0;
-	var lastId=0;
-	var refreshing=false;
-	var executed=false;
-	var newsList='';
-	
-	var section="all";
-
-	$(document).on("pageinit", "#page3", function () {
-		console.log("entro");
-		Refresh();
-	});
-	
-	function trace(text){
-		//log.innerHTML+=text+'<br>';
-	}
-	
-	function SetStatus(status){
-		//document.getElementById('estado').innerHTML=status;
-	}
-	
-	function Refresh(){
-	
-		if(!refreshing){
-			console.log("entro refresh");
-			refreshing=true;
-			SetStatus('Comprobando datos...');			
-			news=new Array(cuantity);
-			if(localStorage.getItem('lastVersion')==null){
-				localStorage.setItem('lastVersion', lastVersion);
-			}else{
-				lastVersion= localStorage.getItem('lastVersion');
-			}
-			request= new XMLHttpRequest();
-			request.open('GET',urlVersion,true);
-			request.onreadystatechange= CheckVersion;
-			request.send();
-		}
-	}
-	
-	function CheckVersion(){
-		console.log("state"+request.readyState+"   status"+request.status);
-		if (request.readyState==4 && (request.status==200)){
-			console.log("entro2");
-			var svVersion= request.responseText;
-			if(svVersion!=lastVersion){
-				newsList='';
-				//arreglar esto luego e_e
-				lastVersion= svVersion;
-				localStorage.setItem('lastVersion', lastVersion);
+			<div id="AgendaCBC" filter="AgendaCBC" class="newsContainer" >
+			<img src='images/ajax-loader.gif' align='center' style='display:block;'>
+			</div>
+			<div id="CBCDeportes" filter="CBCDeportes" class="newsContainer" >
+			<img src='images/ajax-loader.gif' align='center' style='display:block;'>
+			</div>
+			<div id="CBCVos" filter="CBCVos" class="newsContainer">
+			<img src='images/ajax-loader.gif' align='center' style='display:block;'>
+			</div>
+			<div id="GPS" filter="GPS" class="newsContainer" >
+			<img src='images/ajax-loader.gif' align='center' style='display:block;'>
+			</div>
+			
+			
+			
+		</div>
+		
+		<div data-role="footer" data-theme="b" data-tap-toggle="false" data-position="fixed" style="padding:0;border:0;margin:0;background-color: transparent;">
+			
+			
+			<div style="width:70%;">
+			<img src="images/footer1.png" width="11.1%;" ><a href="https://twitter.com/extensioncbc"><img src="images/footer2.png" width="14.3%;"></a><a href="https://www.facebook.com/cbcextension?fref=ts"><img src="images/footer3.png" width="15.2%;"></a><a href="http://extensioncbc.com.ar"><img src="images/footer4.png" width="15.6%;"></a><a href="http://extensioncbc.com.ar"><img src="images/footer5.png" width="15.5%;"></a><img src="images/footer6.png" width="28.3%;">
+			
+			</div>
+			<div style="background-color:white">
+			<div style="width:70%;">
+			<img src="images/footer7.png" width="11.1%;"><a href="https://twitter.com/extensioncbc"><img src="images/footer8.png" width="14.3%;"></a><a href="https://www.facebook.com/cbcextension?fref=ts"><img src="images/footer9.png" width="15.2%;"></a><a href="http://extensioncbc.com.ar"><img src="images/footer10.png" width="15.6%;"></a><a href="http://extensioncbc.com.ar"><img src="images/footer11.png" width="15.5%;"></a><img src="images/footer12.png" width="28.3%;">
+			</div>
+			</div>
+			
+		</div>
+		
+		<div data-role="panel" id="left-panel" data-theme="c" data-display="push" style="border:0;position:fixed;margin:0;">
+			
+			<div data-role="controlgroup" corners="false" data-corners="false" >
+				<ul data-role="listview">
+				<!--<li data-icon="false"; class="botonSlider" style="border-width:0.5em;border-bottom-style:solid;border-bottom-color:#037c77;"><a href="#"onclick="ShowSection('ComunidadUba');">
+					Comunidad UBA 
+				</a></li>!-->
 				
-				SetStatus('Descargando noticias...');
-				lastVersion+=1;
-				RequestNews(lastVersion);
+				<div class="borderBtnSliderTop" style="height:4em;"></div>
+				<li data-icon="false" class="botonSlider">
+				<div class="borderBtnSliderTop"></div>
+				<a href="#"onclick="ShowSection('ComunidadUba');" style="border:0;">
+					Comunidad UBA 
+				</a>
+				<div class= "borderBtnSliderBottom"></div>
+				</li>
 				
-			}else{
-				if(!executed){
-					newsList='';
-					lastId=lastVersion;
-					SetStatus('Accediendo noticias...');
-					SearchStoredNews();
-					AppendArticles();
-				}else{
-					SetStatus('Actualizado');
-					refreshing=false;
-				}
-			}	
+				<li data-icon="false" class="botonSlider">
+				<div class="borderBtnSliderTop"></div>
+				<a href="#"onclick="ShowSection('AgendaCBC');" style="border:0;">
+					Agenda CBC
+				</a>
+				<div class= "borderBtnSliderBottom"></div>
+				</li>
+				<li data-icon="false" class="botonSlider">
+				<div class="borderBtnSliderTop"></div>
+				<a href="#"onclick="ShowSection('ExtensionCBC');" style="border:0;">
+					Extensión CBC
+				</a>
+				<div class= "borderBtnSliderBottom"></div>
+				</li>
+				<li data-icon="false" class="botonSlider">
+				<div class="borderBtnSliderTop"></div>
+				<a href="#"onclick="ShowSection('CBCDeportes');" style="border:0;">
+					CBC Deportes
+				</a>
+				<div class= "borderBtnSliderBottom"></div>
+				</li>
+				<li data-icon="false" class="botonSlider">
+				<div class="borderBtnSliderTop"></div>
+				<a href="#"onclick="ShowSection('CBCVos');" style="border:0;">
+					CBC+Vos
+				</a>
+				<div class= "borderBtnSliderBottom"></div>
+				</li>
+				<li data-icon="false" class="botonSlider">
+				<div class="borderBtnSliderTop"></div>
+				<a href="#"onclick="ShowSection('GPS');" style="border:0;">
+					GPS
+				</a>
+				<div class= "borderBtnSliderBottom"></div>
+				</li>
+				<div class="borderBtnSliderBottom" style="height:4em;"></div>
+				</ul>
+			</div>
+		</div>
+		<script src="sliderMenu.js"></script> 
+		
+		
+		<script>
 			
-		}
-	}
-	
-	function RequestNews(index){
-		request= new XMLHttpRequest();
-		request.open('GET',urlGetNews+'?cu='+cuantity+'&ca='+section+'&ix='+index,true);
-		request.onreadystatechange=CheckLastNews;
-		request.send();
-	}
-		
-		function CheckLastNews(){
-			if (request.readyState==4 && request.status==200){
-				if(request.responseText!=''){
-					newsLoaded=0;
-					DecodeNews(request.responseText);
-				}else{
-					refreshing=false;
-					return;
-				}
-			}
-		}
-		
-		function DecodeNews(text){
-			var auxText=text;
-			var index=1;
-			while(index>-1){
-				index=auxText.indexOf('~');
-				var auxArray= auxText.substring(0,index).split('|');
-				if(localStorage.getItem('art'+auxArray[0])==null){
-					StoreNew(auxArray);
-				}else{
+			$( "#testList" ).on( "pagebeforecreate",function(){
+				//GetNews(10,"Noticias",10000);
+				//InitializeFoot("#testList");
+				GetNews(10,"ComunidadUba",10000,"ComunidadUba");
+				AddSection("ComunidadUba",false);
+				AddSection("AgendaCBC",true);
+				AddSection("ExtensionCBC",true);
+				AddSection("CBCDeportes",true);
+				AddSection("CBCVos",true);
+				AddSection("GPS",true);
 				
-				}
-				auxText= auxText.substring(index+1,auxText.length);
-				index=auxText.indexOf('~');
-				if(newsLoaded<cuantity){
-					AddToShowList(auxArray);
-				}
-			}
-			if(newsLoaded<cuantity){
-				lastId-=1;
-				SearchStoredNews();
-			}
-			AppendArticles();
-		}
-		
-		function StoreNew(auxArray){
-			localStorage.setItem('art'+auxArray[0],true);
-			localStorage.setItem('art'+auxArray[0]+'.title',auxArray[1]);
-			localStorage.setItem('art'+auxArray[0]+'.author',auxArray[2]);
-			localStorage.setItem('art'+auxArray[0]+'.date',auxArray[3]);
-			localStorage.setItem('art'+auxArray[0]+'.category',auxArray[4]);
-			localStorage.setItem('art'+auxArray[0]+'.summary',auxArray[5]);
-			localStorage.setItem('art'+auxArray[0]+'.id',auxArray[0]);
-			
-			request= new XMLHttpRequest();
-			
-			var aux= localStorage.getItem('art'+auxArray[0]+'.content');
-			
-			if(aux==null||aux=='undefined'){
-			//asincronizar esto
-				request.open("GET",urlArt+auxArray[0] +".txt",false);
-				request.send();
-				localStorage.setItem('art'+auxArray[0]+'.content', request.responseText);
-			}
-			
-			
-			
-		}
-		
-		function AddToShowList(auxArray){
-			console.log("noticia agregada");
-			newsList+= '<li data-role="list-divider" onclick="Clicked('+auxArray[0]+')" data-theme="d">'+auxArray[1] +'</li><li><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p>'+auxArray[5]+'</p></a></li>';
-			//newsList+= '<li data-role="list-divider">'+auxArray[1] +'<span class="ui-li-count">'+auxArray[4] +' </span></li><li><a onclick="Clicked('+auxArray[0]+')" href=#page2 data-transition="slide"><p class="li-aside">'+auxArray[2] +', '+ auxArray[3]+'</p><p>'+auxArray[5]+'</p></a></li>';
-			newsLoaded+=1;
-			
-			lastId=auxArray[0];
-		}
-		
-		function SearchStoredNews(){
-			while(newsLoaded<cuantity&&lastId>=0){
-				if(localStorage.getItem('art'+lastId)!=null){
-					if(section=="all"||localStorage.getItem('art'+lastId+".category")==section){
-					var auxArray= new Array(6);
-					auxArray[0]= localStorage.getItem('art'+lastId+".id");
-					auxArray[1]= localStorage.getItem('art'+lastId+".title");
-					auxArray[2]= localStorage.getItem('art'+lastId+".author");
-					auxArray[3]= localStorage.getItem('art'+lastId+".date");
-					auxArray[4]= localStorage.getItem('art'+lastId+".category");
-					auxArray[5]= localStorage.getItem('art'+lastId+".summary");
-					AddToShowList(auxArray);
-					}
-				}
-				lastId-=1;
-			}
-		}
-		
-		function AppendArticles(){
-			if(executed){
-				CleanNews();
-			}
-			console.log("apendeados");
-			$('#testList').append( newsList ).listview("refresh");
-			refreshing=false;
-			executed=true;
-			
-			//SetStatus('Actualizado');
-		}
-		
-		function CleanNews(){
-			var node= document.getElementById('testList');
-			
-			while(node.hasChildNodes()){
-				node.removeChild(node.childNodes[0]);
-			}
-			console.log("cleneadas");
-		}
-		
-		function Clicked(event){
-			document.getElementById('titulo').innerHTML= localStorage.getItem('art'+event+'.title');
-			document.getElementById('sub').innerHTML= localStorage.getItem('art'+event+'.summary');
-			document.getElementById('asd5').innerHTML= localStorage.getItem('art'+event+'.content');
-		}
-		
-		function LoadMore(){
-			refreshing=true;
-			newsLoaded=0;
-			/*SearchStoredNews();
-			AppendArticles();*/
-			
-			RequestNews(lastId);
-		}
-		
-		function SetFilter(filter){
-			section=filter;
-			if(executed){
-				CleanNews();
-				news=new Array(cuantity);
-				newsList='';
-				RequestNews(lastVersion);
-				console.log("asdas"+newsList);
-			}
-			//Refresh();
-			
-		}
-		
-		$(document).on("pageinit", "#page7", function () {
-			console.log("entro inicio");
-			Importantes();
-		});
-		
-		var requestI;
-		
-		var importantesList;
-		
-		function Importantes(){
-			console.log("entro importante");
-			if(importantesList!="undefinded"){
-			//	var node= document.getElementById('noticiasImportantes');
-				//while (node.hasChildNodes()){
-//				node.removeChild(node.childNodes[0]);
-	//			}
-		//		$('.ui-listview').append( importantesList ).listview("refresh");
-			}
-			requestI= new XMLHttpRequest();
-			requestI.open('GET',urlImportantes+"?ix=500000",true);
-			requestI.onreadystatechange= DownloadImportantes;
-			requestI.send();
-		}
-		
-		function DownloadImportantes(){
-			console.log(requestI.readyState+"     "+requestI.status);
-			if (requestI.readyState==4 && (requestI.status==200)){
-								
-				importantesList= requestI.responseText;
-				var node= document.getElementById('noticiasImportantes');
-				while (node.hasChildNodes()){
-					node.removeChild(node.childNodes[0]);
-				}
-				$('#noticiasImportantes:visible').append( importantesList).listview("refresh");
-				DownloadAtt(importantesList);
-			}
-			
-			
-			
-		}
-		
-		function DownloadAtt(auxListViewImportantes){
-			console.log("ntro");
-			var auxIn=0;
-			
-			while(auxIn<3){
-			var stringId= "not"+auxIn;
-			var id;
-				var title;
-				var date;
-				var author;
-				var category;
-				var summary;
-				
-				Array.prototype.slice.call(document.getElementById(stringId).attributes).forEach(function(item) {
-				if(item.name=="author"){
-					author= item.value;
-				}
-				if(item.name=="nota"){
-				
-					id= item.value;
-				}
-				if(item.name=="date"){
-					date= item.value;
-				}
-				if(item.name=="title"){
-					title= item.value;
-				}
-				if(item.name=="summary"){
-					summary= item.value;
-				}
-				if(item.name=="category"){
-					category= item.value;
-				}
+				//agregar inicializacion de header y footer tmb
 			});
-			console.log("id es   "+id);
-			localStorage.setItem('art'+id,true);
-			localStorage.setItem('art'+id+'.title',title);
-			localStorage.setItem('art'+id+'.author',author);
-			localStorage.setItem('art'+id+'.date',date);
-			localStorage.setItem('art'+id+'.category',category);
-			localStorage.setItem('art'+id+'.summary',summary);
-			localStorage.setItem('art'+id+'.id',id);
 			
-			request= new XMLHttpRequest();
-		
-			var aux= localStorage.getItem('art'+id+'.content');
-		
-			if(aux==null||aux=='undefined'){
-			//asincronizar esto
-				request.open("GET",urlArt+id +".txt",false);
-				request.send();
-				localStorage.setItem('art'+id+'.content', request.responseText);
-				console.log(request.responseText);
-			}
-			auxIn+=1;
-			}
-		}
-		
-		function DeleteDatos(){
-			localStorage.clear();
-		}
-		
-</script>
-
-	<div data-role="page" data-theme="d" id="page2">
-		<div data-role='header' id="hdrMain" data-theme="d" name="hdrMain" data-nobackbtn="false">
-			<h1 id='titulo'> Titulo </h1>
-			<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
-			<img src="images/Volverrecuadro.png">
-			</a>
+		</script>
 		</div>
-		<div data-role='content' id="mainContent4" name= "news content">
-			<div data-role='header' id='estadoHdr' data-theme="c"> <p id="sub" class="bajada"> Sub</p></div>
-			<div data-role='content' id='asd5' name= 'asd5' data-theme="d">
+		
+		
+		
+		
+		<div id="noticia" data-role="page" >
+		
+		<script>
+		InitializeHead("#noticia");
+		
+		
+		</script>
+		
+		<div role="contentNoticias" class="ui-content" id="asd">
+			
+		<!--	<a href="#left-panel"><img src="images/Menu.png" style="position:fixed;width:auto;top:35%;left:-0.1%;height:40%;"></a>!-->
+			
+			
+			<div id="nota" style="position:relative;left:10%;width:80%;padding-top:10em;"></div>
+			
+			<script>
+			//acceder a las variables de noticias
+			
+			
+			</script>
+			
+			
+		</div>
+		<div data-role="footer" data-theme="b" data-tap-toggle="false" data-position="fixed" style="padding:0;border:0;margin:0;background-color: transparent;">
+			
+			
+			<div style="width:70%;">
+			<img src="images/footer1.png" width="11.1%;" ><a href="https://twitter.com/extensioncbc"><img src="images/footer2.png" width="14.3%;"></a><a href="https://www.facebook.com/cbcextension?fref=ts"><img src="images/footer3.png" width="15.2%;"></a><a href="http://extensioncbc.com.ar"><img src="images/footer4.png" width="15.6%;"></a><a href="http://extensioncbc.com.ar"><img src="images/footer5.png" width="15.5%;"></a><img src="images/footer6.png" width="28.3%;">
+			
+			</div>
+			<div style="background-color:white">
+			<div style="width:70%;">
+			<img src="images/footer7.png" width="11.1%;"><a href="https://twitter.com/extensioncbc"><img src="images/footer8.png" width="14.3%;"></a><a href="https://www.facebook.com/cbcextension?fref=ts"><img src="images/footer9.png" width="15.2%;"></a><a href="http://extensioncbc.com.ar"><img src="images/footer10.png" width="15.6%;"></a><a href="http://extensioncbc.com.ar"><img src="images/footer11.png" width="15.5%;"></a><img src="images/footer12.png" width="28.3%;">
+			</div>
 			</div>
 			
-		</div>		
-
-	</div>
-	<div data-role="page" data-theme="d" id="pageConfig">
-		<div data-role='header' id="hdConfig" data-theme="d" name="hdrConfig" data-nobackbtn="false">
-			<h1 id='titulo'> Ajustes </h1>
-			<a onclick="history.go(-1)" data-role="button" data-theme="b" class= "ui-btn2">
-			<img src="images/Volverrecuadro.png">
-			</a>
 		</div>
-		<div align="center">
-		<a onclick="DeleteDatos()" data-role="button" data-theme="b" class= "ui-btnMain" align="center">
-			<p> Borrar Noticias</p>
-		</a>
-		</div>
-	</div>
+		
+		<script>
+			
+			$( "#noticia" ).on( "pagebeforecreate",function(){
+				
+				//InitializeFoot("#noticia");
+				//GetNews(10,"Noticias",10000);
+				
+				//agregar inicializacion de header y footer tmb
+			});
+		</script>
+		
+		
+		
+	
 
 </body>
 
 
+
 </html>
+
