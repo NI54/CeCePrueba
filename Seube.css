@@ -827,7 +827,3 @@ background:#ffffff;
 	background: -webkit-linear-gradient(#006c69, #088f89);
 	background: linear-gradient(#006c69, #088f89);
 }
-
-.menuAcostado{
-	position:fixed;width:auto;top:22%;left:-0.1%;height:20em;z-index:2;
-}
