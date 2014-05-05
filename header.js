@@ -17,7 +17,7 @@ $(window).on("orientationchange",function(){
     
 	$('.imgHeader').css({ width:'25em',height:'auto'});
 	$('.imgHeaderInvi').css({ width:'25em',height:'auto',visibility:'hidden'});
-	$('.menuAcostado').css({ position:'fixed',width:'auto',top:'22%',left:'-0.1%',height:'15em','z-index':'2'});
+	$('.menuAcostado').css({ position:'fixed',width:'auto',top:'22%',left:'-0.1%',height:'17em','z-index':'2'});
 	
   }
   else // Landscape
@@ -25,7 +25,7 @@ $(window).on("orientationchange",function(){
     //$( "imgHeader" ).attr( "style", "width:15em;height:auto;" );
 	$('.imgHeader').css({ width:'15em',height:'auto'});
 	$('.imgHeaderInvi').css({ width:'15em',height:'auto',visibility:'hidden'});
-    $('.menuAcostado').css({ position:'fixed',width:'auto',top:'22%',left:'-0.1%',height:'10em','z-index':'2'});
+    $('.menuAcostado').css({ position:'fixed',width:'auto',top:'22%',left:'-0.1%',height:'12em','z-index':'2'});
   }
 });
 
